@@ -76,16 +76,13 @@ jobs:
           <html>
               <head>
                   <meta charset="UTF-8" />
-                  <meta http-equiv="refresh" content="0;url='altstore://source?url=https://enmity.burrito.software/apps.json'" />
-                  <title>Redirecting to altstore://source?url=https://enmity.burrito.software/apps.json</title>
+                  <meta http-equiv="refresh" content="0;url='altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json'" />
+                  <title>Redirecting to altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json</title>
               </head>
               <body>
-                  Redirecting to <a href="altstore://source?url=https://enmity.burrito.software/apps.json">altstore://source?url=https://enmity.burrito.software/apps.json</a>.
+                  Redirecting to <a href="altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json">altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json</a>.
               </body>
           </html>
-          EOL
-          cat > pages/CNAME <<EOL
-          enmity.burrito.software
           EOL
 
       - name: Deploy to GitHub Pages
