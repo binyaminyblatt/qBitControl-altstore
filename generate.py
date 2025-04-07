@@ -52,14 +52,14 @@ source['iconURL'] = 'https://raw.githubusercontent.com/advplyr/audiobookshelf-ap
 source['description'] = 'Audiobookshelf is a self-hosted audiobook server for managing and listening to your audiobooks.'
 source['homepage'] = 'https://audiobookshelf.org'
 source["featuredApps"] = [
-    "com.audiobookshelf.app.dev"
+    "com.audiobookshelf.app"
   ]
 source['apps'] = []
 source['news'] = []
 
 app = {
   "name": "Audiobookshelf",
-  "bundleIdentifier": "com.audiobookshelf.app.dev",
+  "bundleIdentifier": "com.audiobookshelf.app",
   "developerName": "Audiobookshelf Team",
   "localizedDescription": "Audiobookshelf is a self-hosted audiobook server for managing and listening to your audiobooks.",
   "minimumOSVersion": "13.0",
