@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import zipfile
 import plistlib
 from entitlements import getEntitlements
@@ -60,6 +61,9 @@ app = {
   "name": "Audiobookshelf",
   "bundleIdentifier": "com.audiobookshelf.app.dev",
   "developerName": "Audiobookshelf Team",
+  "localizedDescription": "Audiobookshelf is a self-hosted audiobook server for managing and listening to your audiobooks.",
+  "minimumOSVersion": "13.0",
+
   "iconURL": "https://raw.githubusercontent.com/advplyr/audiobookshelf-app/master/static/Logo.png",
   "tintColor": "#bf9000",
   "screenshots": [
@@ -151,17 +155,35 @@ if response.status_code == 200:
                   if tag['name'] == tag_name:
                     commit_msg = requests.get(tag['commit']['url'], headers=headers).json()['commit']['message']
                     break
-
+                localizedDescription = release["body"]
+                localizedDescription = re.sub('<[^<]+?>', '', localizedDescription)  # Remove HTML tags
+                localizedDescription = re.sub(r'#{1,6}\s?', '', localizedDescription)  # Remove markdown header tags
+                localizedDescription = re.sub(r'\*{2}', '', localizedDescription)
+                localizedDescription = re.sub(r'-', '•', localizedDescription)
+                localizedDescription = re.sub(r'`', '"', localizedDescription)
                 version = {
                   "version": plist['CFBundleShortVersionString'],
                   "buildVersion": plist['CFBundleVersion'],
                   "date": lastModified,
-                  "localizedDescription": f"{tag_name} - {commit_msg}",
+                  "localizedDescription": localizedDescription,
                   "downloadURL": downloadURL,
                   "size": appSize,
                   "minOSVersion": plist['MinimumOSVersion']
                 }
                 app['versions'].append(version)
+                news_identifier = f"release-{plist['CFBundleShortVersionString']}"
+                news_entry = {
+                    "title": f"{plist['CFBundleShortVersionString']} - Audiobookshelf",
+                    "identifier": news_identifier,
+                    "caption": f"Update of Audiobookshelf just got released!",
+                    "date": lastModified,
+                    "tintColor": "#000000",
+                    "imageURL": "https://raw.githubusercontent.com/advplyr/audiobookshelf-app/master/static/Logo.png",
+                    "notify": True,
+                    "url": f"https://github.com/advplyr/audiobookshelf-app/releases/tag/{tag_name}"
+                }
+                source['news'].append(news_entry)
+                # Add the app to the source
                 break
 
 # Add app to the source

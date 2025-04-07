@@ -66,7 +66,7 @@ jobs:
         with:
           file_path: cache/lastGenerated.json
 
-      - name: Create redirect file, copy apps.json, set CNAME
+      - name: Create redirect file, copy apps.json
         if: steps.check_file.outputs.files_exists == 'true'
         run: |
           mkdir pages
@@ -76,11 +76,11 @@ jobs:
           <html>
               <head>
                   <meta charset="UTF-8" />
-                  <meta http-equiv="refresh" content="0;url='altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json'" />
-                  <title>Redirecting to altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json</title>
+                  <meta http-equiv="refresh" content="0;url='sidestore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json'" />
+                  <title>Redirecting to sidestore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json</title>
               </head>
               <body>
-                  Redirecting to <a href="altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json">altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json</a>.
+                  Redirecting to <a href="sidestore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json">altstore://source?url=https://binyaminyblatt.github.io/audiobookshelf-altstore-repo/apps.json</a>.
               </body>
           </html>
           EOL
