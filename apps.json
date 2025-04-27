@@ -1,0 +1,155 @@
+{
+  "name": "qBitControl",
+  "tintColor": "#bf9000",
+  "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/refs/heads/main/qBitControl/Assets.xcassets/logo.imageset/logo1.png",
+  "description": "qBitControl is a tool to control qBittorrent remotely.",
+  "homepage": "https://github.com/Michael-128/qBitControl",
+  "featuredApps": [
+    "MikeMichael225.qBitControl"
+  ],
+  "apps": [
+    {
+      "name": "qBitControl",
+      "bundleIdentifier": "MikeMichael225.qBitControl",
+      "developerName": "Michael-128",
+      "subtitle": "Remote client for qBittorrent.",
+      "localizedDescription": "qBitControl is the definitive remote client for managing your qBittorrent downloads on iOS devices. With qBitControl, you can effortlessly add torrents, browse files, monitor your download progress, and manage your torrents, all while enjoying real-time statistics and a native iOS user interface.",
+      "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "tintColor": "#449FFF",
+      "category": "utilities",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc1.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc2.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc3.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc4.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc5.png"
+      ],
+      "versions": [
+        {
+          "version": "1.3.3",
+          "buildVersion": "17",
+          "date": "2025-04-21T18:32:32Z",
+          "localizedDescription": "New:\r\n\u2022 Add Search Functionality to RSS Tab\r\n\r\nImprovements:\r\n\u2022 Improve Charts in Stats Tab\r\n\r\nFixes:\r\n\u2022 Fix Translation Related Bugs\r\n\u2022 Update Translation\r\n\u2022 Add a Missing Uncategorized Option in Category Selection View\r\n\r\nFull Changelog: https://github.com/Michael\u2022128/qBitControl/compare/1.3.2...1.3.3",
+          "downloadURL": "https://github.com/Michael-128/qBitControl/releases/download/1.3.3/qBitControl.ipa",
+          "size": 4321496,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.2",
+          "buildVersion": "14",
+          "date": "2025-02-13T19:07:43Z",
+          "localizedDescription": "New:\r\n\u2022 Added New Category & Tag Selection System\r\n\u2022 Added RSS Feed & Folder Renaming & Deleting\r\n\u2022 Updated Translations\r\n\r\nImprovements:\r\n\u2022 Enhance Tips when Adding Server (by: @MrNocole in https://github.com/Michael\u2022128/qBitControl/pull/62)\r\n\u2022 Improve Naming to Match qBitttorrent\r\n\r\nFixes:\r\n\u2022  Fixed Pause Option for qBittorrent 5.0.X in 'Torrent Add Sheet'\r\n\r\n\r\nFull Changelog: https://github.com/Michael\u2022128/qBitControl/compare/1.3.1...1.3.2",
+          "downloadURL": "https://github.com/Michael-128/qBitControl/releases/download/1.3.2/qBitControl.ipa",
+          "size": 4222623,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.1",
+          "buildVersion": "10",
+          "date": "2025-01-09T19:50:11Z",
+          "localizedDescription": "New:\r\n\u2022 Added RSS Support\r\n\u2022 Added 'Add Tracker' Option\r\n\u2022 Added Option to Download First & Last Pieces First\r\n\u2022 Added Force Start Option\r\n\u2022 Added 'Help with Translation' Button in About Section\r\n\u2022 Added Chinese Simplified Localization (by @peaynan)\r\n\r\n\r\nImprovements:\r\n\u2022 Rearranged Torrent Details & Added ETA\r\n\u2022 Updated Localizations\r\n\r\nFixes:\r\n\u2022 Fixed Compatibility with qBittorrent 5.0.0 API\r\n\r\nFull Changelog: https://github.com/Michael\u2022128/qBitControl/compare/1.2.2...1.3.1",
+          "downloadURL": "https://github.com/Michael-128/qBitControl/releases/download/1.3.1/qBitControl.ipa",
+          "size": 4178946,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.2.2",
+          "buildVersion": "8",
+          "date": "2024-09-20T09:34:37Z",
+          "localizedDescription": "New:\r\n\u2022 Added Server Editing\r\n\r\nFixed:\r\n\u2022 Disabled Category Path Auto\u2022Fill if Automatic Torrent Management is Enabled\r\n\u2022 Fixed Compatibility for Older qBittorrent Clients\r\n\r\nFull Changelog: https://github.com/Michael\u2022128/qBitControl/compare/1.2.1...1.2.2",
+          "downloadURL": "https://github.com/Michael-128/qBitControl/releases/download/1.2.2/qBitControl.ipa",
+          "size": 4084813,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.2.1",
+          "buildVersion": "7",
+          "date": "2024-09-03T15:30:22Z",
+          "localizedDescription": "New:\r\n\u2022 Improved 'Stats' View\r\n\u2022 Added 'About' Section\r\n\r\nFixed:\r\n\u2022 Torrent availability is now displayed correctly\r\n\u2022 Fixed password encoding\r\n\r\n\r\nFull Changelog: https://github.com/Michael\u2022128/qBitControl/compare/1.2...1.2.1",
+          "downloadURL": "https://github.com/Michael-128/qBitControl/releases/download/1.2.1/qBitControl.ipa",
+          "size": 4080368,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.1",
+          "buildVersion": "5",
+          "date": "2024-07-25T16:33:36Z",
+          "localizedDescription": "New:\r\n\u2022 Added Torrent Priority Management \r\n\u2022 Added Sequential Download Option\r\n\u2022 Added MacCatalyst support (by: @vit9696)\r\n\u2022 Added Polish & Japanese Localizations\r\n\u2022 Allowed HTTP connections over the internet\r\n\r\nFixed:\r\n\u2022 Fixed incorrect ratio bug on stats page\r\n\u2022 Refactored a lot of code\r\n\u2022 Fix category save path not updating (by: @narenh)\r\n\r\nNew Contributors\r\nThank you @vit9696 and @narenh for contributing to the repository. Your efforts are greatly appreciated!\r\n\u2022 @vit9696 made their first contribution in https://github.com/Michael\u2022128/qBitControl/pull/11\r\n\u2022 @narenh made their first contribution in https://github.com/Michael\u2022128/qBitControl/pull/15\r\n\r\nFull Changelog: https://github.com/Michael\u2022128/qBitControl/compare/1.1...1.2",
+          "downloadURL": "https://github.com/Michael-128/qBitControl/releases/download/1.2/qBitControl.ipa",
+          "size": 4061844,
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "beta-reports-active",
+          "get-task-allow",
+          "cdhashes"
+        ],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": [
+    {
+      "title": "1.3.3 - qBitControl",
+      "identifier": "release-1.3.3",
+      "caption": "Update of qBitControl just got released!",
+      "date": "2025-04-21T18:32:32Z",
+      "tintColor": "#000000",
+      "imageURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "notify": true,
+      "url": "https://github.com/Michael-128/qBitControl/releases/tag/1.3.3"
+    },
+    {
+      "title": "1.3.2 - qBitControl",
+      "identifier": "release-1.3.2",
+      "caption": "Update of qBitControl just got released!",
+      "date": "2025-02-13T19:07:43Z",
+      "tintColor": "#000000",
+      "imageURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "notify": true,
+      "url": "https://github.com/Michael-128/qBitControl/releases/tag/1.3.2"
+    },
+    {
+      "title": "1.3.1 - qBitControl",
+      "identifier": "release-1.3.1",
+      "caption": "Update of qBitControl just got released!",
+      "date": "2025-01-09T19:50:11Z",
+      "tintColor": "#000000",
+      "imageURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "notify": true,
+      "url": "https://github.com/Michael-128/qBitControl/releases/tag/1.3.1"
+    },
+    {
+      "title": "1.2.2 - qBitControl",
+      "identifier": "release-1.2.2",
+      "caption": "Update of qBitControl just got released!",
+      "date": "2024-09-20T09:34:37Z",
+      "tintColor": "#000000",
+      "imageURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "notify": true,
+      "url": "https://github.com/Michael-128/qBitControl/releases/tag/1.2.2"
+    },
+    {
+      "title": "1.2.1 - qBitControl",
+      "identifier": "release-1.2.1",
+      "caption": "Update of qBitControl just got released!",
+      "date": "2024-09-03T15:30:22Z",
+      "tintColor": "#000000",
+      "imageURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "notify": true,
+      "url": "https://github.com/Michael-128/qBitControl/releases/tag/1.2.1"
+    },
+    {
+      "title": "1.1 - qBitControl",
+      "identifier": "release-1.1",
+      "caption": "Update of qBitControl just got released!",
+      "date": "2024-07-25T16:33:36Z",
+      "tintColor": "#000000",
+      "imageURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "notify": true,
+      "url": "https://github.com/Michael-128/qBitControl/releases/tag/1.2"
+    }
+  ]
+}
