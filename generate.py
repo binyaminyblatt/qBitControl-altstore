@@ -108,8 +108,16 @@ if response.status_code == 200:
                 f.write(response.content)
               
               with zipfile.ZipFile(f'{EXTRACT_TO}/{APP_KEY}', 'r') as zip_ref:
-                zip_ref.extract(f'Payload/{BINARY_KEY}.app/Info.plist', path=EXTRACT_TO)
-                zip_ref.extract(f'Payload/{BINARY_KEY}.app/{BINARY_KEY}', path=EXTRACT_TO)
+                try:
+                  zip_ref.extract(f'Payload/{BINARY_KEY}.app/Info.plist', path=EXTRACT_TO)
+                  zip_ref.extract(f'Payload/{BINARY_KEY}.app/{BINARY_KEY}', path=EXTRACT_TO)
+                except Exception as e:
+                  if os.path.isfile(f'{EXTRACT_TO}/Payload/{BINARY_KEY}.app/Info.plist') and os.path.isfile(f'{EXTRACT_TO}/Payload/{BINARY_KEY}.app/{BINARY_KEY}'):
+                    print('Files extracted.')
+                  else:
+                    raise e
+
+                  
 
               # Declare the plist to get useful info like CFBundleShortVersionString and CFBundleVersion
               plist = plistlib.load(open(f'{EXTRACT_TO}/Payload/{BINARY_KEY}.app/Info.plist', 'rb'))
