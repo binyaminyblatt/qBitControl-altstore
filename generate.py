@@ -38,7 +38,7 @@ if not os.path.exists(CACHE_TO):
   os.makedirs(CACHE_TO)
 
 headers = {
-    'User-Agent': 'Audiobookshelf-Worker-Helper/1.0',
+    'User-Agent': 'qBitControl-Worker-Helper/1.0',
     'Authorization': f'token {api_key}'  # Replace YOUR_API_KEY with your actual API key
 }
 
@@ -46,28 +46,32 @@ response = requests.get(BASE_URL + '/releases', headers=headers)
 
 # AltStore source construction
 source = {}
-source['name'] = 'Audiobookshelf'
+source['name'] = 'qBitControl'
 source['tintColor'] = '#bf9000'
-source['iconURL'] = 'https://raw.githubusercontent.com/advplyr/audiobookshelf-app/master/static/Logo.png'
-source['description'] = 'Audiobookshelf is a self-hosted audiobook server for managing and listening to your audiobooks.'
-source['homepage'] = 'https://audiobookshelf.org'
+source['iconURL'] = 'https://raw.githubusercontent.com/Michael-128/qBitControl/refs/heads/main/qBitControl/Assets.xcassets/logo.imageset/logo1.png'
+source['description'] = 'qBitControl is a tool to control qBittorrent remotely.'
+source['homepage'] = 'https://github.com/Michael-128/qBitControl'
 source["featuredApps"] = [
-    "com.audiobookshelf.app"
+    "MikeMichael225.qBitControl"
   ]
 source['apps'] = []
 source['news'] = []
 
 app = {
-  "name": "Audiobookshelf",
-  "bundleIdentifier": "com.audiobookshelf.app",
-  "developerName": "Audiobookshelf Team",
-  "localizedDescription": "Audiobookshelf is a self-hosted audiobook server for managing and listening to your audiobooks.",
-  "minimumOSVersion": "13.0",
-
-  "iconURL": "https://raw.githubusercontent.com/advplyr/audiobookshelf-app/master/static/Logo.png",
-  "tintColor": "#bf9000",
+  "name": "qBitControl",
+  "bundleIdentifier": "MikeMichael225.qBitControl",
+  "developerName": "Michael-128",
+  "subtitle": "Remote client for qBittorrent.",
+  "localizedDescription": "qBitControl is the definitive remote client for managing your qBittorrent downloads on iOS devices. With qBitControl, you can effortlessly add torrents, browse files, monitor your download progress, and manage your torrents, all while enjoying real-time statistics and a native iOS user interface.",
+  "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+  "tintColor": "#449FFF",
+  "category": "utilities",
   "screenshots": [
-    "https://raw.githubusercontent.com/advplyr/audiobookshelf-app/master/screenshots/DeviceDemoScreens.png"
+      "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc1.png",
+      "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc2.png",
+      "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc3.png",
+      "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc4.png",
+      "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.3.3/sc5.png"
   ],
 }
 app['versions'] = []
@@ -173,14 +177,14 @@ if response.status_code == 200:
                 app['versions'].append(version)
                 news_identifier = f"release-{plist['CFBundleShortVersionString']}"
                 news_entry = {
-                    "title": f"{plist['CFBundleShortVersionString']} - Audiobookshelf",
+                    "title": f"{plist['CFBundleShortVersionString']} - qBitControl",
                     "identifier": news_identifier,
-                    "caption": f"Update of Audiobookshelf just got released!",
+                    "caption": f"Update of qBitControl just got released!",
                     "date": lastModified,
                     "tintColor": "#000000",
-                    "imageURL": "https://raw.githubusercontent.com/advplyr/audiobookshelf-app/master/static/Logo.png",
+                    "imageURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
                     "notify": True,
-                    "url": f"https://github.com/advplyr/audiobookshelf-app/releases/tag/{tag_name}"
+                    "url": f"https://github.com/Michael-128/qBitControl/releases/tag/{tag_name}"
                 }
                 source['news'].append(news_entry)
                 # Add the app to the source
